@@ -1,0 +1,21 @@
+<html>
+  <body>
+    <input id="guessNumber" type="text" />
+    <input type="button" onclick="check()" value="check" />
+    <p id="random"></p>
+    <div id="feedback"></div>
+  </body>
+  <script>
+    function check() {
+      var randomNumber = Math.floor(Math.random() * 10 + 1);
+      var guessNumber = document.getElementById("guessNumber").value;
+      var feedback = document.getElementById("feedback");
+
+      if (guessNumber == randomNumber) {
+        feedback.innerHTML = "Good Work";
+      } else {
+        feedback.innerHTML = "Not matched";
+      }
+    }
+  </script>
+</html>

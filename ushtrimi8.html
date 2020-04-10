@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>
+      JavaScript function to find a word within a string.
+    </title>
+  </head>
+  <body></body>
+  <script>
+    function findWord(text, word) {
+      var x = 0,
+        y = 0;
+
+      for (i = 0; i < text.length; i++) {
+        if (text[i] == word[0]) {
+          for (j = i; j < i + word.length; j++) {
+            if (text[j] == word[j - i]) {
+              y++;
+            }
+          }
+          y = 0;
+        }
+      }
+      return "'" + word + "' was found ";
+    }
+    console.log(findWord("Wash your hands", "hands"));
+    console.log(findWord("Stay home, stay safe!", "home"));
+  </script>
+</html>
